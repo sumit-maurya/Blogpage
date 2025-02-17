@@ -1,0 +1,15 @@
+﻿@model BasicBlog.BlogPost
+
+<h1>Create Blog Post</h1>
+
+<form method="post">
+    <div>
+        <label for="Title">Title</label>
+        <input type="text" name="Title" value="@Model.Title" required />
+    </div>
+    <div>
+        <label for="Content">Content</label>
+        <textarea name="Content" required>@Model.Content</textarea>
+    </div>
+    <button type="submit">Save</button>
+</form>

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<BasicBlog.BlogPost>
+
+<h1>Blog Posts</h1>
+
+<a href="@Url.Action("Create")">Create New Post</a>
+
+<ul>
+    @foreach (var post in Model)
+    {
+        <li>
+            <h2>@post.Title</h2>
+            <p>@post.Content</p>
+            <small>Created on: @post.CreatedAt</small>
+        </li>
+    }
+</ul>
